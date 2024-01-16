@@ -1,0 +1,77 @@
+:root {
+    --black: #000807;
+    --papayawhip: #FFF1D0;
+    --cornflowerblue: #6495ED;
+    --rojo: #DD1C1A;
+    --jonquil: #F0C808;
+    --purpureus: #A14DA0;
+    --battleshipgray: #86836D;
+    --violet: #E086D3;
+    --hookersgreen: #397367;
+    --cambridgeblue: #92BFB1;
+    --egyptianblue: #29339B;
+}
+
+body {
+    background-color: var(--black);
+    overflow-y: scroll;
+    scrollbar-width: none;  /* Hiding scrollbar for Firefox */
+    -ms-overflow-style: none;  /* Hiding scrollbar for IE and Edge */
+    cursor: default;
+    margin-bottom: 10vh;
+}
+
+/* Hiding scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {display: none;}
+
+.block {
+    margin: auto;
+    width: 60%;
+    display: block;
+    margin-top: 20vh;
+    padding: 20px;
+    border-left: 5px solid var(--papayawhip);
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6vh;
+    overflow-wrap: break-word;
+    font-weight: bold;
+    color: var(--papayawhip);
+}
+
+/* half-page on desktop (pinned to side) */
+@media screen and (max-width: 768px) {
+    .block {
+        font-size: 5vw;
+        width: 80%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 490px) {
+    .block {
+        font-size: 6vw;
+        width: 84%;
+        border-left: 4px solid var(--papayawhip);
+        padding: 10px;
+        margin-top: 10vh;
+    }
+}
+
+#color-change {
+    animation: color-change-animation 3s infinite;
+}
+
+@keyframes color-change-animation {
+    0% { color: var(--cornflowerblue); }
+    25% { color: var(--violet); }
+    50% { color: var(--jonquil); }
+    75% { color: var(--cambridgeblue); }
+    100% { color: var(--cornflowerblue); }
+}
+
+a {
+    text-decoration: none;
+    color: var(--papayawhip);
+    cursor: default;
+}

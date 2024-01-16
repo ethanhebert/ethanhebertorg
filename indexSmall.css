@@ -1,0 +1,107 @@
+:root {
+    --black: #000807;
+    --papayawhip: #FFF1D0;
+    --cornflowerblue: #6495ED;
+    --rojo: #DD1C1A;
+    --jonquil: #F0C808;
+    --purpureus: #A14DA0;
+    --battleshipgray: #86836D;
+    --violet: #E086D3;
+    --hookersgreen: #397367;
+    --cambridgeblue: #92BFB1;
+    --egyptianblue: #29339B;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--papayawhip);
+    overflow: hidden;
+    cursor: default;
+}
+
+/* my name in cursive */
+#title-holder {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+#title {
+    font-family: 'Dr Sugiyama', cursive;
+    color: var(--black);
+    font-size: 20vw;
+    white-space: nowrap;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* the dimensions for the 9 box panels */
+.window {
+    width: 72%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+/* 2 sets of panels - front to hover and back to display */
+#windowBack {
+    z-index: -10;
+}
+
+#windowFront {
+    z-index: 20;
+}
+
+/* row of 3 boxes */
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-basis: 33%;
+}
+
+/* a single of the 9 boxes */
+.container {
+    flex-basis: 33%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    margin: 4px;
+    display: flex;
+    background-color: transparent;
+    color: var(--black);
+    border: 3px solid var(--black);
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px;
+    font-size: 2.5vw;
+}
+
+/* various colors of each container upon hover */
+#c0 {background-color: var(--cornflowerblue); color: var(--papayawhip);}
+#c1 {background-color: var(--jonquil); color: var(--papayawhip);}
+#c2 {background-color: var(--purpureus); color: var(--papayawhip);}
+#c3 {background-color: var(--cambridgeblue); color: var(--papayawhip);}
+#c4 {background-color: var(--egyptianblue); color: var(--papayawhip);}
+#c5 {background-color: var(--battleshipgray); color: var(--papayawhip);}
+#c6 {background-color: var(--violet); color: var(--papayawhip);}
+#c7 {background-color: var(--rojo); color: var(--papayawhip);}
+#c8 {background-color: var(--hookersgreen); color: var(--papayawhip);}

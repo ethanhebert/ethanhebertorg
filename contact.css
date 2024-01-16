@@ -1,0 +1,97 @@
+:root {
+    --black: #000807;
+    --papayawhip: #FFF1D0;
+    --cornflowerblue: #6495ED;
+    --rojo: #DD1C1A;
+    --jonquil: #F0C808;
+    --purpureus: #A14DA0;
+    --battleshipgray: #86836D;
+    --violet: #E086D3;
+    --hookersgreen: #397367;
+    --cambridgeblue: #92BFB1;
+    --egyptianblue: #29339B;
+    --deg: 295deg;
+    --b1: 20%;
+    --b2: 34%;
+    --b3: 36%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(295deg, var(--jonquil) var(--b1) 34%, var(--cornflowerblue) var(--b2) 36%, var(--hookersgreen) var(--b3) 38%, var(--rojo) 38%);
+    color: var(--papayawhip);
+    overflow: hidden;
+    cursor: default;
+    animation: shift ease-in-out 8s infinite;
+}
+
+/* background animation */
+@keyframes shift {
+    0%, 30% { 
+        --b1: 20%;
+        --b2: 34%;
+        --b3: 36%
+    }
+    50%, 80% { 
+        --b1: 20%;
+        --b2: 100%;
+        --b3: 36%
+    }
+    100% { 
+        --b1: 20%;
+        --b2: 34%;
+        --b3: 36%
+    }
+}
+
+@property --b1 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 20%;
+}
+
+@property --b2 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 34%;
+}
+
+@property --b3 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 36%;
+}
+
+@property --deg {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 295deg;
+}
+
+#content {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vw;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border-left: 0.8vw solid var(--papayawhip);
+    height: 70vh;
+}
+
+/* change for phone */
+@media screen and (max-width: 490px) {
+    body {
+        background: linear-gradient(285deg, var(--jonquil) var(--b1) 34%, var(--cornflowerblue) var(--b2) 36%, var(--hookersgreen) var(--b3) 38%, var(--rojo) 38%);
+    }
+    #content {
+        border-left: 1vw solid var(--papayawhip);
+        font-size: 6vw;
+        padding: 10px;
+    }
+}
